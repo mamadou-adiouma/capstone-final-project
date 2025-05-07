@@ -5,8 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
-djangorestframework = "*"
 mysqlclient = "*"
+djangorestframework = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
 
 [dev-packages]
 

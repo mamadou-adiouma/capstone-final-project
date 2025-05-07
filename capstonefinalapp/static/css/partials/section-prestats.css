@@ -1,0 +1,120 @@
+.heading_shadow{
+    font-size: 42px;
+}
+
+#hero{
+    border-radius: 12px;
+    font-size: 18px;
+    min-height: 80px;
+    margin-block: 20px;
+    text-align: center;
+    padding: 12px;
+    color: #FFF;
+    background:linear-gradient(to top, rgba(56, 71, 66, 0.879), rgba(198, 198, 198, 0.3)),
+     url('../../images/hero-img.jpg') no-repeat center center/cover;
+
+     > * {
+        text-shadow: 2px 1px 2px rgba(4, 0, 0, 0.5);
+        margin: 0;
+     }
+
+     p{
+        font-size: 18px;
+        font-weight: 600;
+        margin-block: 18px;
+     }
+}
+
+#hero .cta {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    min-width: 180px;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 25px;
+    border: 5px solid #FFF;
+    text-decoration: 2px underline transparent;
+}
+
+#hero .cta:hover{
+    background-color: #4a5e57;
+    text-decoration-color:#FFF;
+    border-color: #4a5e57;
+}
+
+.table_prestat {
+    margin-top: 2rem !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    gap: 18px;
+}
+
+.table_prestat article {
+    background-color: #FFF;
+    position: relative;
+    border: 1px solid #c0bebe;
+    padding: 15px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.table_prestat img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.table_prestat article a::before{
+    position: absolute;
+    content: '👁️';
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.table_prestat article:hover a::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.table_prestat article:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.table_prestat article a {
+    color: #ff92a4;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.table_prestat article a::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: transparent;
+}
+
+#slot {
+    list-style: none;
+    counter-reset: icon;
+}
+
+#slot li::before {
+    margin-right: 8px;
+    counter-increment: icon;
+    content: '⏱️';
+}

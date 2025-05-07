@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} menu {% endblock %}
+{% load static %}
+{% block content %}
+<h1>Menu</h1>
+<!--Begin col-->
+<section class="column-menu-imgs">
+    {% if items|length > 0 %}
+    {% for item in items %}
+    <article class="item-card">
+        <img src="{% static item.image %}" alt="{{ item.name }}">
+        <div class="item-info">
+            <h2 class="item-name">{{ item.name }}</h2>
+            <p class="item-price">$ {{ item.price }}</p>
+            <p class="item-description">{{ item.description }}</p>
+            <a href="{% url 'menu-item' pk=item.pk %}"></a>
+        </div>
+    </article>
+    {% endfor %}
+    {% else %}
+        <h4>
+            Add Items to the database to see all the list of items here!. <br>
+            Exemple (in this order) : <br><br> 
+            name : Grilled Sish <br>
+            price : 14.99 <br>
+            description : Tender pieces of marinated meat skewered and grilled...  <br>
+            image (correct path) : menu_images/grilled-fish.jpg<br>
+        </h4>
+
+        <article class="item-card">
+            <img src=" {% static 'menu_images/bruchetta.jpg' %}" alt="Bruchetta">
+            <div class="item-info">
+                <h2 class="item-name">Bruschetta</h2>
+                <p class="item-price">$ 8.99</p>
+                <p class="item-description">A classic Italian appetizer made with grilled bread topped with a mixture of diced tomatoes, fresh basil, garlic, and a drizzle of balsamic glaze. Perfect for sharing or as a light snack.</p>
+                <a href="{% url 'home'%}"></a>
+            </div>
+        </article>
+    {% endif %}
+</section>
+<!--End col-->
+{% endblock %}

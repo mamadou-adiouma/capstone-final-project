@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.png' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A brief description" />
+    <meta name="author" content="Based in Chicago, Illinois, Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist." />
+    
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="preload" as="style" href="{% static 'css/main.css' %}" onload="this.rel = 'stylesheet'" />
+    <title>Little Lemon | Capstone - {% block title %}Home{% endblock %}</title>
+</head>
+<body>
+        {% include 'htmls/header-nav.html' %}
+        <main>{% block content %} {% endblock %}</main>
+        {% include 'htmls/footer.html' %}
+
+</body>
+</html>

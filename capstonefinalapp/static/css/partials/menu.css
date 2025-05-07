@@ -1,0 +1,62 @@
+.sigle_item{
+    margin-top: 3rem;
+}
+
+.column-menu-imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 12px;
+    line-height: 1;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.item-card img{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.item-info{
+    padding: 12px;
+    margin: 0;
+}
+
+.item-name{
+    font-weight: 700;
+    color: #1b1a1a;
+}
+
+.item-price{
+    background-color: #afffaf;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.item-description{
+    text-align: left;
+    font-size: 15px;
+    color: #333;
+}
+
+.item-info a {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: transparent;
+}
+
+.column-menu-imgs h4{
+    color: crimson;
+}

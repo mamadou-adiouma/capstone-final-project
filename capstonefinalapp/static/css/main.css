@@ -1,0 +1,33 @@
+@import url("../css/partials/section-prestats.css");
+@import url("../css/partials/header-nav.css");
+@import url("../css/partials/footer.css");
+@import url("../css/partials/about.css");
+@import url("../css/partials/menu.css");
+
+* {
+    font-family: system-ui, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.50;
+}
+
+main {
+    max-width: 1200px;
+    min-width: 360px;
+    margin-inline: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px !important;
+    }
+
+    header img {
+        width: 200px !important;
+    }
+
+    .cta {
+        padding: 2px !important;
+    }
+}
